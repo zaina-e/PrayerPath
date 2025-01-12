@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+
+/* Login Button */
+.login-btn {
+    background-color: transparent;
+    border: 1px solid #E4D4C8;
+    color: #E4D4C8;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: 'Amiri';
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Body Direction Overwrite */
+body {
+    font-family: 'Amiri', serif;
+    background-color: #E2E6E7;
+    color: #201A1E;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    direction: rtl;
+}
+
+.login-container {
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 100px;
+    background-color: #E4D4C8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 430px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #D0B49F;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #D0B49F;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #201A1E;
+    color: #FFFFFF;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #201A1E;
+}

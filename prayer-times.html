@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أوقات الصلاة</title>
+  <link rel="stylesheet" href="timesstyle.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-brand">
+      <a href="index.html">Prayer Path</a>
+  </div>
+  <ul class="navbar-menu">
+      <li><a href="aboutus.html">من نحن</a></li>
+      <li><a href="daily.html">الورد اليومي</a></li>
+      <li><a href="prayer-times.html">اوقات الصلاة</a></li>
+      <li><a href="duaa.html">الادعية</a></li>
+      <li><a href="athkarhtml.html">الاذكار</a></li>
+  </ul>
+  <div class="navbar-buttons">
+      <a href="login.html">تسجيل الدخول</a>
+      <a href="createacc.html">إنشاء حساب</a>
+
+  </div>
+  <div class="profile-icon">
+    <a href="profile.html"><img src="icon.png" alt="صورة الملف الشخصي"></a>
+</div>
+</nav>
+
+  <main>
+    <h1>أوقات الصلاة</h1>
+
+    <!-- Current Location Section -->
+    <div class="location" id="location">
+      <span>📍</span><span>جاري تحديد الموقع...</span>
+    </div>
+    <div class="prayer-container" id="prayer-container">
+      <div class="loading">جاري تحميل أوقات الصلاة...</div>
+    </div>
+
+    <!-- Cities Prayer Times -->
+    <section>
+      <h2>جدة</h2>
+      <div class="prayer-container" id="prayer-jeddah"></div>
+    </section>
+
+    <section>
+      <h2>مكة المكرمة</h2>
+      <div class="prayer-container" id="prayer-makkah"></div>
+    </section>
+
+    <section>
+      <h2>الرياض</h2>
+      <div class="prayer-container" id="prayer-riyadh"></div>
+    </section>
+
+    <section>
+      <h2>الدمام</h2>
+      <div class="prayer-container" id="prayer-dammam"></div>
+    </section>
+  </main>
+
+  <script>
+    const cities = {
+      jeddah: { lat: 21.4858, lon: 39.1925 },
+      makkah: { lat: 21.3891, lon: 39.8579 },
+      riyadh: { lat: 24.7136, lon: 46.6753 },
+      dammam: { lat: 26.3927, lon: 49.9777 }
+    };
+
+    // Function to fetch prayer times
+    function fetchPrayerTimes(lat, lon, containerId) {
+      const apiUrl = `https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${lon}&method=4`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const timings = data.data.timings;
+          const prayerContainer = document.getElementById(containerId);
+          prayerContainer.innerHTML = ""; // Clear previous content
+
+          const prayers = [
+            { name: "الفجر", time: timings.Fajr },
+            { name: "الظهر", time: timings.Dhuhr },
+            { name: "العصر", time: timings.Asr },
+            { name: "المغرب", time: timings.Maghrib },
+            { name: "العشاء", time: timings.Isha }
+          ];
+
+          prayers.forEach(prayer => {
+            const card = document.createElement("div");
+            card.className = "prayer-card";
+            card.innerHTML = `
+              <div class="prayer-icon">🕌</div>
+              <div class="prayer-name">${prayer.name}</div>
+              <div class="prayer-time">${prayer.time}</div>
+            `;
+            prayerContainer.appendChild(card);
+          });
+        })
+        .catch(error => {
+          document.getElementById(containerId).innerHTML = "حدث خطأ أثناء جلب البيانات.";
+        });
+    }
+
+    // Fetch current location prayer times
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        document.getElementById("location").innerHTML = "المتصفح لا يدعم تحديد الموقع.";
+      }
+    }
+
+    function showPosition(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      fetchPrayerTimes(lat, lon, "prayer-container");
+      document.getElementById("location").innerHTML = `📍 موقعك الحالي`;
+    }
+
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          document.getElementById("location").innerHTML = "تم رفض إذن تحديد الموقع.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          document.getElementById("location").innerHTML = "الموقع غير متاح.";
+          break;
+        case error.TIMEOUT:
+          document.getElementById("location").innerHTML = "انتهت مهلة تحديد الموقع.";
+          break;
+        default:
+          document.getElementById("location").innerHTML = "خطأ غير معروف.";
+      }
+    }
+
+    // Fetch prayer times for static cities
+    function fetchCityPrayerTimes() {
+      fetchPrayerTimes(cities.jeddah.lat, cities.jeddah.lon, "prayer-jeddah");
+      fetchPrayerTimes(cities.makkah.lat, cities.makkah.lon, "prayer-makkah");
+      fetchPrayerTimes(cities.riyadh.lat, cities.riyadh.lon, "prayer-riyadh");
+      fetchPrayerTimes(cities.dammam.lat, cities.dammam.lon, "prayer-dammam");
+    }
+
+    // Initialize
+    getLocation();
+    fetchCityPrayerTimes();
+  </script>
+</body>
+
+</html>

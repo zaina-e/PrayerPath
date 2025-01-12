@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+    font-family: 'Amiri', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E4D4C8;
+    color: #201A1E;
+    direction: rtl;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    background-image: url('homebg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #201A1E;
+}
+
+.hero-overlay h1 {
+    font-size: 36px;
+    color: #201A1E;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 20px;
+    color: #201A1E;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f3e6d8;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #201A1E;
+    font-weight: bold;
+}
+
+p {
+    color: #201A1E;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+}

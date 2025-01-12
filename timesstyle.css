@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+    
+    body {
+      font-family: "Cairo", sans-serif;
+      background-color: #f8f3eb;
+      color: #4c3b28;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      margin-top: 50px;
+    }
+
+    .location {
+      font-size: 1rem;
+      color: #a58d6f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 30px;
+    }
+
+    .prayer-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: #f3e6d8;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .prayer-card {
+      width: 120px;
+      padding: 15px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .prayer-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .prayer-icon {
+      font-size: 2.5rem;
+      color: #a58d6f;
+      margin-bottom: 10px;
+    }
+
+    .prayer-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .prayer-time {
+      color: #4c3b28;
+      font-size: 1rem;
+    }
+
+    .loading {
+      font-size: 1.2rem;
+      color: #a58d6f;
+      margin-top: 20px;
+    }

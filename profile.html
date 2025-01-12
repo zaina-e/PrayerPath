@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <link rel="stylesheet" href="profilestyle.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html">Prayer Path</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="aboutus.html">من نحن</a></li>
+            <li><a href="daily.html">الورد اليومي</a></li>
+            <li><a href="prayer-times.html">اوقات الصلاة</a></li>
+            <li><a href="duaa.html">الادعية</a></li>
+            <li><a href="athkarhtml.html">الاذكار</a></li>
+        </ul>
+        <div class="navbar-buttons">
+            <a href="login.html">تسجيل الدخول</a>
+            <a href="createacc.html">إنشاء حساب</a>
+
+        </div>
+        <div class="profile-icon">
+            <a href="profile.html"><img src="icon.png" alt="صورة الملف الشخصي"></a>
+        </div>
+    </nav>
+    <main>
+        <!-- Profile Container -->
+        <div class="profile-container">
+            <!-- Profile Icon -->
+            <div class="profile-icon">
+                <a href="#"><img src="icon.png" alt="صورة الملف الشخصي"></a>
+            </div>
+
+            <!-- Greeting -->
+            <div class="greeting">مرحباً محمد</div>
+
+            <!-- Achievements Card -->
+            <div class="achievements-card">
+                <h3>إنجازات اليوم</h3>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" checked>
+                        أذكار الصباح
+                    </label>
+                    <label>
+                        <input type="checkbox" checked>
+                        أذكار المساء
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        الورد اليومي
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        دعاء اليوم
+                    </label>
+                </div>
+                <button class="save-button">حفظ</button>
+
+                <div class="checkbox-group" style="margin-top: 15px;">
+                    <label>
+                        <input type="checkbox" checked>
+                        تفعيل إشعارات أوقات الصلاة
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        تفعيل إشعارات أذكار وأدعية
+                    </label>
+                </div>
+            </div>
+            <form action="login.html"> 
+                <button type="submit" class="logout-button">تسجيل خروج</button>
+            </form>
+            <!-- Logout Button -->
+
+        </div>
+
+    </main>
+</body>
+
+</html>

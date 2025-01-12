@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+/* Navbar */
+
+main {
+    padding-top: 60px; 
+}
+.navbar {
+    background-color: #201A1E;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    direction: ltr; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 60px; 
+    z-index: 1000; 
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    margin-right: 20px;
+}
+
+.navbar-brand a {
+    color: #E4D4C8;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Amiri';
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex: 1; 
+}
+
+/* Normal Menu Items */
+.navbar-menu li {
+    margin: 0 15px;
+    font-family: 'Amiri';
+}
+
+.navbar-menu li a {
+    color: #E4D4C8;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Buttons on the Far Right */
+.navbar-buttons {
+    margin-left: auto; 
+    display: flex;
+    gap: 40px; 
+    padding-right: 40px; 
+}
+/* Profile Container */
+.profile-container {
+    max-width: 400px; 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Profile Icon */
+  .profile-icon {
+    width: 50px; 
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto 20px auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+    margin: 0 auto; 
+    margin-top: 15px; 
+  }
+  
+  .profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+.navbar-buttons a {
+    background-color: transparent;
+    border: 1px solid #E4D4C8;
+    color: #E4D4C8;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: 'Amiri';
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-buttons a:hover {
+    background-color: #D0B49F;
+    color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-buttons {
+        margin-left: 0;
+        margin-top: 10px;
+        padding-right: 0; 
+        align-self: flex-start;
+    }
+}
+

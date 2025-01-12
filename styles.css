@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arima', sans-serif;
+    background-color: #E4D4C8; 
+    color: #201A1E;
+}
+
+/* Main Container */
+.main-container {
+    background-color: #E4D4C8; 
+    min-height: 100vh; 
+}
+
+/* Section Padding */
+section {
+    padding: 20px 0;
+    background-color: #E4D4C8; 
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    background-image: url('homebg.png');
+    background-size: contain; 
+    background-color: #E4D4C8;
+    background-repeat: no-repeat; 
+    background-position: center top; 
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #201A1E;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #E5D4CA; 
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    color: #E5D4CA; 
+}
+
+
+/* Prayer Times Section */
+.prayer-times {
+    background-color: #E5D4CA;
+    padding: 20px;
+    text-align: center;
+}
+
+.prayer-times h2 {
+    color: #201A1E;
+    font-family: 'Amiri';
+    margin-bottom: 20px;
+    font-family: 'Amiri';
+}
+.prayer-times h6 {
+    color: gray;
+    font-family: 'Amiri';
+    margin-bottom: 20px;
+    font-family: 'Amiri';
+}
+.location {
+    font-size: 1rem;
+    color: #a58d6f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 30px;
+  }
+
+  .prayer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f3e6d8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .prayer-card {
+    width: 120px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .prayer-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .prayer-icon {
+    font-size: 2.5rem;
+    color: #a58d6f;
+    margin-bottom: 10px;
+  }
+
+  .prayer-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+
+  .prayer-time {
+    color: #4c3b28;
+    font-size: 1rem;
+  }
+
+  .loading {
+    font-size: 1.2rem;
+    color: #a58d6f;
+    margin-top: 20px;
+  }
+
+
+/* Extra Content Section */
+.extra-content {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #E5D4CA; 
+}
+
+.extra-card {
+    background-color: #D0B49F;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #201A1E;
+    font-family: 'Amiri';
+    width: 300px; 
+    flex-shrink: 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.extra-card .athkar-btn {
+    background-color: #7F6951;
+    border: 1px solid #E4D4C8;
+    color: #E4D4C8;
+    font-family: 'Amiri';
+    padding: 15px 25px; 
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; 
+}
+.navbar a {
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.extra-card .athkar-btn:hover {
+    transform: scale(1.1); 
+    color: #D0B49F; 
+}
